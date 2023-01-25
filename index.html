@@ -11,7 +11,8 @@
         :root {
             --background-color: #ffffff60;
             --bt-blue: #02476c;
-            --page-width: 660px
+            --page-width: 660px;
+            --page-width-mobile: 100%;
         }
         html {
             padding: 0;
@@ -20,11 +21,6 @@
 
         body {
             font-family: "Exo 2", sans-serif;
-            /*background-color: cyan;*/
-            /*background-image: url("https://joesdaily.com/wp-content/uploads/2020/08/the-office-conference-room-interview-window-1536x864.jpg");*/
-            /*background-repeat: no-repeat;*/
-            /*background-attachment: fixed;*/
-            /*background-size: cover;*/
             padding: 0;
             margin: 0;
         }
@@ -51,6 +47,7 @@
         article {
             max-width: var(--page-width);
             min-width: var(--page-width);
+
         }
         article h1 {
             font-size: 40px;
@@ -91,6 +88,16 @@
             min-width: var(--page-width);
             padding: 20px 0;
             background-color: var(--background-color);
+        }
+
+        @media screen and (max-width: 992px) {
+            #liveblog-container-by27,
+            article,
+            header,
+            .cover-photo {
+                max-width: var(--page-width-mobile);
+                min-width: var(--page-width-mobile);
+            }
         }
         x-sign {
             --interval: 1s;
